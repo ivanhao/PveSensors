@@ -40,12 +40,9 @@ while [ true ]
 	chmod +x /usr/bin/s.sh
 	h=`sensors|awk 'END{print NR}'`
 	let h=$h*11+300
-	echo $h
 	n=`sed '/widget.pveNodeStatus/,/height/=' $js -n|sed -n '$p'`
-	echo $n
 	sed -i ''$n'c \ \ \ \ height:\ '$h',' $js 
 	n=`sed '/pveversion/,/\}/=' $js -n|sed -n '$p'`
-	echo $n
 	sed -i ''$n' r ./p1' $js
 	n=`sed '/pveversion/,/version_text/=' $pm -n|sed -n '$p'`
 	sed -i ''$n' r ./p2' $pm
