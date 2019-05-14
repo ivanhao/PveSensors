@@ -38,8 +38,44 @@ while [ true ]
 	cp $pm $pm.backup
 	cp ./s.sh /usr/bin/s.sh
 	chmod +x /usr/bin/s.sh
+	#--create the configs--
+	d=`sensors|grep '^[a-zA-Z0-9].[[:print:]]*:.\s*\S*[0-9].\s*[A-Z].' -o|sed 's/:\ */:/g'|sed 's/\ C\ /C/g'|sed 's/\ V\ /V/g'|sed 's/\ RP/RPM/g'|sed 's/\ //g'|awk -F ":" '{print $1}'`
+	rm ./p1
+cat << EOF >> ./p1
+        ,{
+            xtype: 'box',
+            colspan: 2,
+	    title: gettext('Sensors Data:'),
+            padding: '0 0 20 0'
+        }
+	,{
+	    itemId: 'Sensors',
+	    colspan: 2,
+	    printBar: false,
+	    title: gettext('Sensors Data:')
+	}
+EOF
+	for i in $d
+	do
+cat << EOF >> ./p1
+	,{
+	    itemId: '$i',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('$i'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['$i'];
+		return s;
+	    }
+	}
+EOF
+	done
+	#--configs end--
 	h=`sensors|awk 'END{print NR}'`
-	let h=$h*11+300
+	let h=$h*9+300
 	n=`sed '/widget.pveNodeStatus/,/height/=' $js -n|sed -n '$p'`
 	sed -i ''$n'c \ \ \ \ height:\ '$h',' $js 
 	n=`sed '/pveversion/,/\}/=' $js -n|sed -n '$p'`

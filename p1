@@ -1,17 +1,311 @@
-	,{   
-            itemId: 'sensors',
+        ,{
+            xtype: 'box',
             colspan: 2,
-            printBar: true,
-            title: gettext('Sensors Data'),
-            textField: 'tdata',
-            width: 500,
-            renderer:function(value){
-                var d = JSON.parse(value);
-                var s = "<br>";
-                for(var k in d)
-                {
-                s = s + "<div class='left-aligned'>" + k + " </div> <div class='right-aligned'> " + d[k] + "</div><br>";
-                }
-                return s;
-            }
+	    title: gettext('Sensors Data:'),
+            padding: '0 0 20 0'
+        }
+	,{
+	    itemId: 'Sensors',
+	    colspan: 2,
+	    printBar: false,
+	    title: gettext('Sensors Data:')
+	}
+	,{
+	    itemId: 'Vcore',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('Vcore'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['Vcore'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'in1',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('in1'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['in1'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'AVCC',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('AVCC'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['AVCC'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'in4',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('in4'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['in4'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'in5',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('in5'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['in5'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'in6',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('in6'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['in6'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: '3VSB',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('3VSB'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['3VSB'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'Vbat',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('Vbat'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['Vbat'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'fan1',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('fan1'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['fan1'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'fan2',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('fan2'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['fan2'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'fan3',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('fan3'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['fan3'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'SYSTIN',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('SYSTIN'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['SYSTIN'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'CPUTIN',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('CPUTIN'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['CPUTIN'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'AUXTIN',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('AUXTIN'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['AUXTIN'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'PECIAgent0',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('PECIAgent0'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['PECIAgent0'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'PCH_CHIP_CPU_MAX_TEMP',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('PCH_CHIP_CPU_MAX_TEMP'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['PCH_CHIP_CPU_MAX_TEMP'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'PECIAgent1',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('PECIAgent1'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['PECIAgent1'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'PCH_CHIP_TEMP',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('PCH_CHIP_TEMP'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['PCH_CHIP_TEMP'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'temp1',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('temp1'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['temp1'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'temp2',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('temp2'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['temp2'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'Packageid0',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('Packageid0'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['Packageid0'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'Core0',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('Core0'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['Core0'];
+		return s;
+	    }
+	}
+	,{
+	    itemId: 'Core1',
+	    colspan: 1,
+	    printBar: false,
+	    title: gettext('Core1'),
+	    textField: 'tdata',
+	    renderer:function(value){
+		var d = JSON.parse(value);
+		var s = "";
+		s = d['Core1'];
+		return s;
+	    }
 	}
