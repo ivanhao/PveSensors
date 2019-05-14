@@ -34,8 +34,8 @@ while [ true ]
 	rm /usr/bin/s.sh
 	systemctl restart pveproxy
 
-	echo "卸载完成! 浏览器打开界面刷新看一下概要界面!"
-        echo "Uninstallation Complete! Go to websites and refresh!"
+	echo "卸载完成! 浏览器打开界面刷新看一下概要界面!（如果无法正常显示需要清一下浏览器缓存！）"
+        echo "Uninstallation Complete! Go to websites and refresh! (you have to clear webbrowser's cache if it's necessary!"
         exit
         ;;
 
