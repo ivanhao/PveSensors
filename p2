@@ -1,1 +1,1 @@
-	$res->{tdata} = `/cgi/cgi-bin/s.sh`;
+	$res->{tdata} = `/usr/bin/s.sh`;

@@ -37,6 +37,7 @@ while [ true ]
 	cp $js $js.backup
 	cp $pm $pm.backup
 	cp ./s.sh /usr/bin/s.sh
+	chmod +x /usr/bin/s.sh
 	h=`sensors|awk 'END{print NR}'`
 	let h=$h*11+300
 	echo $h
