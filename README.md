@@ -42,3 +42,5 @@ rollback your zfs rpool's snapshot and reboot.
 ## 写代码辛苦，如果觉得好的请捐赠一下，自愿捐赠五毛一块的你也没啥损失，我也不会发大财，但是是对我的一种鼓励^_^
 ![pay](./pay.jpg)
 
+感谢以下人士的捐赠：
+qq昵称：昆仑
