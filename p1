@@ -1,0 +1,17 @@
+	,{   
+            itemId: 'sensors',
+            colspan: 2,
+            printBar: true,
+            title: gettext('Sensors Data'),
+            textField: 'tdata',
+            width: 500,
+            renderer:function(value){
+                var d = JSON.parse(value);
+                var s = "<br>";
+                for(var k in d)
+                {
+                s = s + "<div class='left-aligned'>" + k + " </div> <div class='right-aligned'> " + d[k] + "</div><br>";
+                }
+                return s;
+            }
+	}

@@ -1,0 +1,1 @@
+	$res->{tdata} = `/cgi/cgi-bin/s.sh`;
