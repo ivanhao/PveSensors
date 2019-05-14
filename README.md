@@ -5,6 +5,7 @@
 1. clone or download the code to your proxmox ve. `git clone https://github.com/ivanhao/PveSensors.git`
 2. cd to the path
 3. execute the `chmod +x ./*.sh` command to make it have right permission to execute the install or uninstall.
+>you must run `apt-get install lm-sensors` first to install lm-sensors, and run `sensors-detect` to initial.
 4. `./install.sh` to install.
 > Don't forget to make a snapshot for rpool before run it.
 
@@ -26,6 +27,7 @@ rollback your zfs rpool's snapshot and reboot.
 1. clone或下载安装包到proxmox ve里，例如在/root目录运行：`git clone https://github.com/ivanhao/PveSensors.git`。
 2. 命令行cd到安装包的路径里。
 3. 执行`chmod +x ./*.sh`来让程序有执行的权限。
+> 在安装前，你需要`apt-get install lm-sensors`安装好lm-sensors, 然后`sensors-detect`来初始化一下。
 4. `./install.sh`来安装，根据提示很快就完成了。然后刷新界面。
 > 不要忘记执行前给rpool做个快照，以便恢复快照。
 
