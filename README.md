@@ -49,3 +49,5 @@ rollback your zfs rpool's snapshot and reboot.
 qq昵称：思玉
 
 qq昵称：昆仑
+
+qq昵称：deNyC
